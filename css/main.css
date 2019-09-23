@@ -18,14 +18,18 @@ h6 {
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.ttf') format(truetype);
+    src: url('fonts/Roboto-Regular.ttf') format(truetype);
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../fonts/Roboto-Bold.ttf') format(truetype);
+    src: url('fonts/Roboto-Bold.ttf') format(truetype);
     font-weight: 700;
+} 
+
+.movie-list__table td {
+    vertical-align: top;
 }
 
 .movie-list {
@@ -34,15 +38,20 @@ h6 {
 
 .movie-list__header{
     font-size: 50px;
-    color: rgb(37, 37, 37);
+    color: black;
     font-weight: 700px;
-    margin: 0 0 78px;
-    text-align: center;     
+    text-align: center; 
+    margin-bottom: 60px;    
 }
 
 .container {
     max-width: 1030px;
     margin: 0 auto;
+}
+
+.container a{
+    color:white;
+    text-decoration: none;
 }
 
 .movie-list__table{
@@ -52,45 +61,56 @@ h6 {
     overflow: hidden;
 }
 
+.movie-list__table i {
+    font-size: 15px;
+}
+
+
 .movie-list__table th {
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 700;
     color: #fff;
     background: #a3cc40;
-    padding:19px;
+    padding:15px;
 }
 
-.movie-list__table th:nth-child(1) {
-    width: 183px;
-    text-align: center;
-}
-
-.movie-list__table th:nth-child(2) {
-    width: 620px;
+.movie-list__table thead {
     text-align: left;
-    padding-left:80px 
+}
+
+.movie-list__table th:first-child {
+    text-align: center;
 }
 
 
 .movie-list__table td:nth-child(1) {
-    font-size: 22px;
+    font-size: 18px;
     color:#fff;
-    padding:18px;
     text-align: center;
+    width: 220px;
+    padding: 13px;
 }
 
 .movie-list__table td:nth-child(2) {
-    font-size: 22px;
+    font-size: 18px;
     color:#fff;
-    padding:18px;
-    padding-left:80px; 
+    padding-left:80px;
+    width: 300px; 
+    padding: 13px;
 }
 
 .movie-list__table td:nth-child(3) {
-    font-size: 22px;
+    font-size: 18px;
     color:#fff;
-    padding:22px 25px 14px 6px;
+    width: 350px;
+    padding: 13px;
 }
+
+.movie-list__table td:nth-child(4) {
+    text-align: center;
+    padding-top:5px;
+}
+
 
 .movie-list__table tr:nth-child(odd) {
     background:#373737;
@@ -98,6 +118,10 @@ h6 {
 
 .movie-list__table tr:nth-child(even) {
     background:#4b4d4f;
+}
+
+.movie-list__table tr:nth-child(3) {
+    background:#6c6c6c;
 }
 
 

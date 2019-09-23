@@ -1,91 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link href="../css/main.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/icons.css" rel="stylesheet">
     <meta charset="utf-8">
     <title>Продажа билетов в кино в Иннополисе</title>
 </head>
 
 <body>
-    <form action="order.php" method="POST">
-        <b>Закажите билет</b>
-        <hr>
-        <div class="form__name">
-            <label for="c-name">Ваше имя*</label>
-            <br>
-            <input id="c-name" name="client-name" placeholder="Имя*" required aria-required="true">
-        </div>
-
-        <div class="form__email">
-            <label for="email">Введите ваш e-mail*</label>
-            <br>
-            <input id="email" type="email" name="email" placeholder="Ваш email*" required>
-        </div>    
-
-        <div class="form__select">
-            <select name="place" aria-label="Выбрать место">
-                <option value="1">Место 1</option>
-                <option value="2">Место 2</option>
-                <option value="3">Место 3</option>
-                <option value="4">Место 4</option>
-                <option value="5">Место 5</option>
-                <option value="6">Место 6</option>
-                <option value="7" selected>Место 7</option>
-                <option value="8">Место 8</option>
-                <option value="9">Место 9</option>
-                <option value="10">Место 10</option>
-            </select>
-        </div>
-
-        <div class="form__radio">
-            <div>
-                <input id="1ryad" type="radio" name="row" value="1">
-                <label for="1ryad">1 ряд</label>
-            </div>
-
-            <div>
-                <input id="2ryad" type="radio" name="row" value="2">
-                <label for="2ryad">2 ряд</label>
-            </div>
-
-            <div>
-                <input id="3ryad" type="radio" name="row" value="3">
-                <label for="3ryad">3 ряд</label>
-            </div>
-        </div>
-
-        <div class="form__comment">
-            <textarea name="comment" placeholder="Ваш комментарий" aria-label="Ваш комментарий">
-
-            </textarea>
-        </div>  
-
-        <div>
-            <input id="agreement" name="agree" type="checkbox" required aria-required="true">
-            <label for="agreement">Согласие на обработку персональных данных</label>
-        </div>
-
-        <div>
-            <label>Промо-купон:</label>
-            <input type="file" name="promo">
-        </div>
-
-        <input aria-label="Отправить форму" type="submit">
-        <hr>
-    </form>
-
-
     <header style="background: grey">
         <a targer="_blank" href="http://university.innopolis.ru" title="innopolis.ru">
             <img  src="images/logo.png" alt="Университет иннополис" title="Униерситет иннополис" >
         </a>
         <nav>
             <ul>
-                <li><a href="#">Заказать билет</a></li>
-                <li><a href="#">Преимущества </a></li>
-                <li><a href="#">Фильмы</a> </li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#viberite film">Заказать билет</a></li>
+                <li><a href="#dostoinstva">Преимущества </a></li>
+                <li><a href="#films">Фильмы</a> </li>
+                <li><a href="#contacts">Контакты</a></li>
             </ul>
         </nav>
         <span>ваш город:</span> <a href="#"><u>Москва</u></a>
@@ -112,7 +45,7 @@
     </section>
 
 <section>
-    <a name="dostoinstva"></a>
+    <a id="dostoinstva"></a>
     <h2>
         Почему мы?
     </h2>
@@ -141,22 +74,25 @@
 </section>
 
 <section>
-    <a name="viberite film"></a>
+    <a id="viberite film"></a>
     <div class="movie-list">
         <h2 class="movie-list__header">Выберите фильм</h2>
         <div class="container">
             <table class="movie-list__table">
                 <thead>
                     <tr>
-                        <th>Time</th>
-                        <th>Stuff that will happen</th>
-                        <th></th>
+                    <th><a href="#">Начало сеанса <i class="icon icon-up"></i></a></th>
+                    <th><a href="#">Название фильма <i class="icon icon-down"></i></a></th>
+                    <th><a href="#">Жанр</a></th>
+                    <th></th>
                     </tr>
                 </thead>    
                 <tbody>
                     <tr>
-                        <td>10am - 12pm</td>
-                        <td>Introduction and presentations about Envato</td>
+                        <td>10.00</td>
+                        <td><a title="kinopoisk.ru: Человек-паук" href="https://www.kinopoisk.ru/film/838/"
+                        target="_blank">Человек-паук</a></td>
+                        <td>фантастика, боевик, приключения</td>
                         <td><svg 
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -166,8 +102,11 @@
                            </svg></td>
                     </tr>
                     <tr>
-                        <td>12pm - 02pm</td>
-                        <td>Sessions by honorable guests and Speakers</td>
+                        <td>12.00</td>
+                        <td><a title="kinopoisk.ru: Собачья жизнь 2" 
+                        href="https://www.kinopoisk.ru/film/1122114/"
+                        target="_blank">Собачья жизнь2</a></td>
+                        <td>фэнтези, драма, комедия</td>
                         <td><svg 
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -177,8 +116,11 @@
                            </svg></td>
                     </tr>
                     <tr>
-                        <td>02pm - 03pm</td>
-                        <td>Break and Mingle time with the authors</td>
+                        <td>14.00</td>
+                        <td><a title="kinopoisk.ru: История игрушек 4" 
+                        href="https://www.kinopoisk.ru/film/846824/"
+                        target="_blank">История игрушек 4</a></td>
+                        <td>мультфильм, фэнтези, комедия</td>
                         <td><svg 
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -188,8 +130,11 @@
                            </svg></td>
                     </tr>
                     <tr>
-                        <td>03pm - 05pm</td>
-                        <td>Portfolio Review, Rewards and Ending Presentation</td>
+                        <td>16.00</td>
+                        <td><a title="kinopoisk.ru: Люди в черном: Интернэшнл" 
+                        href="https://www.kinopoisk.ru/film/693730/"
+                        target="_blank">Люди в черном: Интернэшнл</a></td>
+                        <td>фантастика, боевик, комедия</td>
                         <td><svg 
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -228,7 +173,7 @@
     <a href="#" title="Получить подарок" alt="Получить подарок">Получить подарок</a>
 </section>
 
-<section>
+<section id="films">
     <h2>
         Фильмы
     </h2>
@@ -291,13 +236,80 @@
             alt="Здесь будет карта"
             title="Здесь будет карта">
     </div>
-    <div>
+    <div id="contacts">
         <a href="http://fb.com" title="fb" target="_blank">facebook</a>
         <a href="http://twitter.com" title="twitter" target="_blank">twitter</a>
         <a href="http://instagram.com" title="im" target="_blank">instagram</a>
         <a href="http://google.com" title="gmail" target="_blank">google</a>
     </div>
 </footer>
+
+<form action="order.php" method="POST">
+    <b>Закажите билет</b>
+    <hr>
+    <div class="form__name">
+        <label for="c-name">Ваше имя*</label>
+        <br>
+        <input id="c-name" name="client-name" placeholder="Имя*" required aria-required="true">
+    </div>
+
+    <div class="form__email">
+        <label for="email">Введите ваш e-mail*</label>
+        <br>
+        <input id="email" type="email" name="email" placeholder="Ваш email*" required>
+    </div>    
+
+    <div class="form__select">
+        <select name="place" aria-label="Выбрать место">
+            <option value="1">Место 1</option>
+            <option value="2">Место 2</option>
+            <option value="3">Место 3</option>
+            <option value="4">Место 4</option>
+            <option value="5">Место 5</option>
+            <option value="6">Место 6</option>
+            <option value="7" selected>Место 7</option>
+            <option value="8">Место 8</option>
+            <option value="9">Место 9</option>
+            <option value="10">Место 10</option>
+        </select>
+    </div>
+
+    <div class="form__radio">
+        <div>
+            <input id="1ryad" type="radio" name="row" value="1">
+            <label for="1ryad">1 ряд</label>
+        </div>
+
+        <div>
+            <input id="2ryad" type="radio" name="row" value="2">
+            <label for="2ryad">2 ряд</label>
+        </div>
+
+        <div>
+            <input id="3ryad" type="radio" name="row" value="3">
+            <label for="3ryad">3 ряд</label>
+        </div>
+    </div>
+
+    <div class="form__comment">
+        <textarea name="comment" placeholder="Ваш комментарий" aria-label="Ваш комментарий">
+
+        </textarea>
+    </div>  
+
+    <div>
+        <input id="agreement" name="agree" type="checkbox" required aria-required="true">
+        <label for="agreement">Согласие на обработку персональных данных</label>
+    </div>
+
+    <div>
+        <label>Промо-купон:</label>
+        <input type="file" name="promo">
+    </div>
+
+    <input aria-label="Отправить форму" type="submit">
+    <hr>
+</form>
 
 </body>
 
