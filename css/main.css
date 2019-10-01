@@ -420,6 +420,9 @@ h6 {
 
 /* fonts end */
 
+html {
+    font-size: 1.46vw;
+}
 
 /* Container */
 
@@ -442,14 +445,16 @@ h6 {
 }
 
 .block01__logo {
+    float: left;
     display: inline-block;
     margin-top: 60px;
 }
 
 .nav {
-    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 55px;
     line-height: 48px;
-    margin-left: 220px;
     font-size: 15px;
     font-weight: 100;
 }
@@ -525,10 +530,14 @@ width: 396px;
     font-weight: 300;
 }
 
+.block02__flexcont {
+    display: flex;
+    justify-content: space-between;
+}
+
 .block02__col1
 {
-    float: left;
-    width: 29%; 
+    width: 33%; 
 }
 
 .portyanka {
