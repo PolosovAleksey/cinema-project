@@ -427,9 +427,9 @@ html {
 /* Container */
 
 .container {
-    width: 1030px;
+    width: 51.5rem;
     margin: 0 auto;
-    padding: 0 18px;
+    padding: 0 .9rem;
     box-sizing: border-box;
 }
 
@@ -459,28 +459,28 @@ html {
 .block01__logo {
     float: left;
     display: inline-block;
-    margin-top: 60px;
+    margin-top: 3rem;
 }
 
 .nav {
     display: flex;
     justify-content: flex-end;
-    padding-top: 55px;
-    line-height: 48px;
-    font-size: 15px;
+    padding-top: 2.75rem;
+    line-height: 2.4rem;
+    font-size: .75rem;
     font-weight: 100;
 }
 
 
 
 .block01__logo-nav {
-    margin-bottom: 170px;
+    margin-bottom: 8.5rem;
 }
 
 .nav__item {
     text-transform: uppercase;
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 1.5rem;
 }
 
 .nav__item a:hover {
@@ -488,14 +488,14 @@ html {
 }
 
 .block01__text1{
-    font-size: 80px;
+    font-size: 4rem;
     font-weight: 100;
     text-align: center;
     color: white;
 }
 
 .block01__text2 {
-    font-size: 50px;
+    font-size: 2.5rem;
     font-weight: 400;
     text-align: center;
     color: white;
@@ -505,25 +505,29 @@ html {
 /* Block 2*/
 
 .block02__text1 {
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 33px;
+    margin-bottom: 1.65rem;
+}
+
+.movie-list__names {
+    font-size: 1.1rem;
 }
 
 .block02__text2 {
-font-size: 14px;
+font-size: .7rem;
 font-weight: 200;
-width: 396px;
+width: 19.8rem;
 }
 
 .text1 {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 .block02__text3 {
-    font-size: 50px;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 130px;
+    margin-bottom: 6.5rem;
 }
 
 .block02__text4, .block02__text5 {
@@ -531,14 +535,14 @@ width: 396px;
 }
 
 .block02__text4 {
-    margin-bottom: 22px;
+    margin-bottom: 1.1rem;
     font-weight: 900;
-    font-size: 35px;
+    font-size: 1.75rem;
     font-weight: 900;
 }
 
 .block02__text5 {
-    font-size: 14px;
+    font-size: .7rem;
     font-weight: 300;
 }
 
@@ -553,17 +557,20 @@ width: 396px;
 }
 
 .portyanka {
-    margin-left: 58px;
+    margin-left: 2.9rem;
 }
 
 .block02__image-wrap{
-    height: 211px;
+    height: 10.55rem;
 }
 .block02__image-wrap{
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
 }
 .block02__image-wrap img{
+    display:block;
+    max-width:100%;
+    height:100%;
     position: absolute;
     left: 0;
     right: 0;
@@ -577,23 +584,23 @@ width: 396px;
 }
 
 .block02__info-wrap {
-    width: 1030px;
+    width: 51.5rem;
     margin:0 auto;
     position: relative;
 }
 
 .block02 {
-    padding-top: 78px;
+    padding-top: 3.9rem;
     
 }
 
 .block02__info {
     position: absolute;
-    width: 455px;
-    padding: 40px 30px;
+    width: 22.75rem;
+    padding: 2rem 1.5rem;
     background: #fff;
     box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
-    top: -200px;
+    top: -10rem;
     right: 0;
     z-index: 100;
 }
@@ -608,35 +615,35 @@ width: 396px;
 }
 
 .movie-list {
-    padding-top:100px;
+    padding-top:5rem;
 }
 
 .movie-list__header{
-    font-size: 50px;
+    font-size: 2.5rem;
     color: black;
     font-weight: 700;
     text-align: center; 
-    margin-bottom: 60px;    
+    margin-bottom: 3rem;    
 }
 
 .movie-list__text1 {
-    font-size: 14px;
+    font-size: .7rem;
     font-weight: 100;
     text-align: center;
-    width: 830px;
+    width: 41.5rem;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 2rem;
 }
 
 .movie-list__table{
     width: 100%;
     border-collapse: collapse;
-    border-radius: 15px;
+    border-radius: .75rem;
     overflow: hidden;
 }
 
 .movie-list__table i {
-    font-size: 15px;
+    font-size: .75rem;
 }
 
 
@@ -645,7 +652,7 @@ width: 396px;
     font-weight: 700;
     color: #fff;
     background: #a3cc40;
-    padding:15px;
+    padding:.75rem;
 }
 
 .movie-list__table thead {
@@ -658,32 +665,32 @@ width: 396px;
 
 
 .movie-list__table td:nth-child(1) {
-    font-size: 18px;
+    font-size: .9rem;
     color:#fff;
     text-align: center;
-    width: 220px;
-    padding: 13px;
+    width: 11rem;
+    padding: .65rem;
 }
 
 .movie-list__table td:nth-child(2) {
-    font-size: 18px;
+    font-size: .9rem;
     color:#fff;
-    padding-left:80px;
-    width: 300px; 
-    padding: 13px;
+    padding-left:4rem;
+    width: 15rem; 
+    padding: .65rem;
 }
 
 .movie-list__table td:nth-child(3) {
-    font-size: 18px;
+    font-size: .9rem;
     color:#fff;
-    width: 350px;
-    padding: 13px;
+    width: 17.5rem;
+    padding: .65rem;
 }
 
 .movie-list__table td:nth-child(4) {
     text-align: center;
     vertical-align: middle;
-    padding-top: 5px;
+    padding-top: .25rem;
 }
 
 
@@ -705,8 +712,9 @@ width: 396px;
 
 .block04 {
     background: url(../images/b4_bg.jpg) no-repeat top center / cover;    
-    height: 700px;
+    height: 35rem;
     position: relative;
+    margin: 5rem 0 2.5rem 0;
 }
 
 .block04:before {
@@ -730,44 +738,53 @@ width: 396px;
 .block04__button{
     display:block;
     float: right;
-    width: 160px;
+    width: 8rem;
     text-decoration: none;
     background: #a3cc40;
     color: #ffffff;
-    border-radius: 15px;
-    padding: 20px 30px; 
-    font-size: 18px;
+    border-radius: .75rem;
+    padding: 1rem 1.5rem; 
+    font-size: .9rem;
+    margin-top:1.5rem;
 }
 
 
 
 .block04__img {
     position: absolute;
+    display:block;
     border: 0px solid white;
-    border-radius: 200px;
-    width: 300px;
+    border-radius: 10rem;
+    width: 15rem;
+    height:15rem;
     overflow: hidden;
     box-shadow: 10.5px 18.187px 12px 0px rgba(35, 31, 32, 0.55);
 }
 
+.block04__img img {
+    display:block;
+    width:100%;
+    height: 100%;
+}
+
 .block04__alltext {
     text-align: right;
-    padding-top: 150px;
+    padding-top: 7.5rem;
     color: white;
-    width: 660px;
+    width: 33rem;
     float:right;
 }
 
 .block04__text1 {
-    font-size: 50px;
+    font-size: 2.5rem;
     font-weight: 900;
-    padding-bottom: 60px;
+    padding-bottom: 3rem;
 }
 
 .block04__text2 {
-    font-size: 14px;
+    font-size: .7rem;
     font-weight: 200;
-    margin-bottom: 25px;
+    margin-bottom: .25rem;
 }
 
 
@@ -777,19 +794,19 @@ width: 396px;
 /* Блок с фильмами */
 
 .movie-grid{
-    margin-bottom: 80px;
+    margin-bottom: 4rem;
 }
 
 .movie-grid__header {
-    font-size: 50px;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 2.5rem;
 }
 
 .movie-grid__headtext {
-    font-size: 14px;
+    font-size: .7rem;
     font-weight: 200;
-    margin-bottom: 60px;
+    margin-bottom: 3rem;
 }
 
 .movie-grid__flex {
@@ -801,7 +818,7 @@ width: 396px;
 
 
 .movie-grid__item {
-    padding: 18px;
+    padding: .9rem;
 }
 
 .movie-grid__inner1 {
@@ -815,13 +832,16 @@ width: 396px;
 
 .movie-grid__discription {
     position: absolute;
+    display:block;
+    max-width:100%;
+    max-height: 100%;
     left: 0;
     right: 0;
     height: 100%;
     bottom: -100%;
     background: rgba(144,210,61,.8);
-    border-radius: 15px;
-    padding: 23px;
+    border-radius: .75rem;
+    padding: 1.15rem;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -829,23 +849,23 @@ width: 396px;
 }
 
 .movie-grid__text1 {
-    font-size: 35px;
+    font-size: 1.75rem;
     font-weight: 900;
     color: white;
-    margin: 0 0 10px;
+    margin: 0 0 .5rem;
 }
 
 .movie-grid__hr {
-    width: 80px;
-    height: 8px;
+    width: 4rem;
+    height: 0.4rem;
     border: 0;
     box-shadow: none;
-    margin: 0 0 14px;
+    margin: 0 0 .7rem;
     background: white;
 }
 
 .movie-grid__text2 {
-    font-size: 18px;
+    font-size: .9rem;
     color: white;
     flex: 1;
 }
@@ -864,11 +884,17 @@ width: 396px;
 }
 
 .movie-grid__link1 + .movie-grid__link1 {
-    padding-left: 6px;
+    padding-left: .3rem;
 }
 
 .movie-grid__poster{
-    height: 296px;
+    height: 14.8rem;
+}
+
+.movie-grid__poster img{
+    display:block;
+    height: 100%;
+    width:100%;
 }
 
 
@@ -880,12 +906,12 @@ width: 396px;
 }
 
 .block07__map {
-    margin-bottom: 60px;
+    margin-bottom: 3rem;
 }
 
 .block07__icons {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 1.5rem;
 }
 
 /*.block07__svg {
@@ -902,10 +928,10 @@ width: 396px;
 }
 
 .block07__text1 {
-    font-size: 18px;
+    font-size: .9rem;
     font-weight: 200;
     text-align: center;
-    margin-bottom: 6px;
+    margin-bottom: .3rem;
     color: white;
 
 }
@@ -915,5 +941,5 @@ width: 396px;
 }
 
 .block07__text2 {
-    padding-bottom:45px;
+    padding-bottom:2.25rem;
 }
