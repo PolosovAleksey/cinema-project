@@ -6,6 +6,8 @@
     <link href="css/icons.css" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <title>Продажа билетов в кино в Иннополисе</title>
 </head>
 
@@ -104,10 +106,10 @@
                 </thead>    
                 <tbody>
                     <tr>
-                        <td>10.00</td>
-                        <td><a title="kinopoisk.ru: Человек-паук" href="https://www.kinopoisk.ru/film/838/"
-                        target="_blank">Человек-паук</a></td>
-                        <td>фантастика, боевик, приключения</td>
+                        <td id="start_film1"></td>
+                        <td id="name_film1"><a title="kinopoisk.ru: Человек-паук" href="https://www.kinopoisk.ru/film/838/"
+                        target="_blank"></a></td>
+                        <td id="janr1"></td>
                         <td><svg 
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -204,7 +206,7 @@
         <p class="movie-grid__headtext">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius ipsum, laudantium neque nihil omnis perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae, suscipit!
         </p>
-    <div class="movie-grid__flex">
+    <div class="movie-grid__flex owl-carousel">
         <div class="movie-grid__item">
             <div class="movie-grid__inner1">
                 <div class="movie-grid__poster">
@@ -846,6 +848,88 @@
     
 </footer>
 
+
+
+<form action="order.php" method="POST">
+    <b>Закажите билет</b>
+    <hr>
+    <div class="form__name">
+        <label for="c-name">Ваше имя*</label>
+        <br>
+        <input id="c-name" name="client-name" placeholder="Имя*" required aria-required="true">
+    </div>
+
+    <div class="fomr__email">
+        <label for="email">Введите ваш e-mail*</label>
+        <br>
+        <input id="email" type="email" name="email" placeholder="Ваш email*" required>
+    </div>    
+
+    <div class="form__select">
+        <select name="place" aria-label="Выбрать место">
+            <option value="1">Место 1</option>
+            <option value="2">Место 2</option>
+            <option value="3">Место 3</option>
+            <option value="4">Место 4</option>
+            <option value="5">Место 5</option>
+            <option value="6">Место 6</option>
+            <option value="7" selected>Место 7</option>
+            <option value="8">Место 8</option>
+            <option value="9">Место 9</option>
+            <option value="10">Место 10</option>
+        </select>
+    </div>
+
+    <div class="form__radio">
+        <div>
+            <input id="1ryad" type="radio" name="row" value="1">
+            <label for="1ryad">1 ряд</label>
+        </div>
+
+        <div>
+            <input id="2ryad" type="radio" name="row" value="2">
+            <label for="2ryad">2 ряд</label>
+        </div>
+
+        <div>
+            <input id="3ryad" type="radio" name="row" value="3">
+            <label for="3ryad">3 ряд</label>
+        </div>
+    </div>
+
+    <div class="form__comment">
+        <textarea name="comment" placeholder="Ваш комментарий" aria-label="Ваш комментарий">
+
+        </textarea>
+    </div>  
+
+    <div>
+        <input id="agreement" name="agree" type="checkbox" required aria-required="true">
+        <label for="agreement">Согласие на обработку персональных данных</label>
+    </div>
+
+    <div>
+        <label>Промо-купон:</label>
+        <input type="file" name="promo">
+    </div>
+
+    <input id="sendPresentInfo" aria-label="Отправить форму" type="submit">
+    <hr>
+</form>
+
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/films.js"></script>
+    <script src="js/getpresent.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel();
+        });
+    </script>
 
 </body>
 

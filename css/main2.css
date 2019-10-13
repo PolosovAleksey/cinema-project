@@ -1,18 +1,77 @@
 .container {
     width: 100%;
+    height:100vh;
+    
 }
 
 .grid {
     display: grid;
     grid-template-rows: 1fr 2fr 1fr 2fr;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2vw;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "c1 c2 c3"
+    "c10 c11 c12"
+    "c7 c8 c9"
+    "c4 c5 c6";
 }
+
+.col1{
+    grid-area: c1;
+}
+.col2{
+    grid-area: c2;
+}
+.col3{
+    grid-area: c3;
+}
+.col4{
+    grid-area: c4;
+}
+.col5{
+    grid-area: c5;
+}
+.col6{
+    grid-area: c6;
+}
+.col7{
+    grid-area: c7;
+}
+.col8{
+    grid-area: c8;
+}
+.col9{
+    grid-area: c9;
+}
+.col10{
+    grid-area: c10;
+}
+.col11{
+    grid-area: c11;
+}
+.col12{
+    grid-area: c12;
+}
+.col13{
+    grid-area: c13;
+}
+
 
 .grid__col1 {
     background-color: yellow;
 }
 
-.grid__col1:nth-child(2) {
+.grid__col1 img {
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+.greycol {
     background-color: grey;
+}
+
+.greencol {
+    
+    background-color: green;
 }
