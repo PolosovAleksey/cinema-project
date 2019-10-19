@@ -1,0 +1,11 @@
+.block01, .block02 {
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    background: #fffdd0;
+}
+
+.text1 {
+    font-size: 20px;
+}
