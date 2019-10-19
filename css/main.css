@@ -447,6 +447,10 @@ html {
     min-height: 100vh;
 }
 
+.block01__main {
+    padding: 7.5rem 0 12.5rem;
+}
+
 .block01:after {
     position: absolute;
     content: '';
@@ -473,9 +477,7 @@ html {
 
 
 
-.block01__logo-nav {
-    margin-bottom: 8.5rem;
-}
+
 
 .nav__item {
     text-transform: uppercase;
@@ -749,6 +751,12 @@ width: 19.8rem;
     margin-top:1.5rem;
 }
 
+.block04__button:hover {
+    background: transparent;
+    color: #a3cc40;
+    border:0.1rem solid #a3cc40;
+}
+
 
 
 .block04__img {
@@ -896,6 +904,23 @@ width: 19.8rem;
     width:100%;
 }
 
+.owl-nav {
+    position: relative;
+}
+
+.owl-next {
+    position: absolute;
+    right: 0;
+    
+}
+
+.owl-prev {
+    position: absolute;
+    left: 0;
+    
+}
+
+
 
 /* footer */
 
@@ -941,6 +966,36 @@ width: 19.8rem;
 
 .block07__text2 {
     padding-bottom:2.25rem;
+}
+
+
+#modalPresent {
+    display: none;
+    position: fixed;
+    width:100%;
+    height:100vh;
+    background: rgba(0, 0, 0, 0.5);
+    top:0;
+    left:0;
+    z-index: 1000;
+    padding-top: 10rem;
+}
+
+
+#modalPresent .form__main {
+    background-color: #fff;
+    width:30rem;
+    margin:auto;
+    border-radius: .5rem;
+    position:relative;
+}
+
+#closeModalPresent {
+    position: absolute;
+    font-size: 30px;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
 }
 
 
@@ -1112,6 +1167,18 @@ width: 19.8rem;
 }
 .movie-grid__item {
     padding:0;
+}
+
+.movie-grid__text1 {
+    font-size:1.2rem;
+}
+
+.movie-grid__text2 {
+    font-size: .8rem;
+}
+
+.movie-grid__discription g {
+    filter: url(#mobileiconsfilm);
 }
 
 }

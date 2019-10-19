@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <title>Продажа билетов в кино в Иннополисе</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
 <body>
@@ -35,7 +36,7 @@
                 </nav>
             </div>
         </header>
-        <div>
+        <div class="block01__main">
             <h1 class="block01__text1">Закажите билет в кино</h1>
             <p class="block01__text2">Всем покупателям подарок!</p>
         </div>
@@ -198,7 +199,7 @@
                 *Be advised, we will only give you Elite thank you swag for each level of elite you cross.That means if you do not cross to the next elite level before the next event, you cannot claim your prizes.
             </p>
             <div class="block04__btn">
-                <a href="#" class="block04__button" title="Получить подарок" alt="Получить подарок">Получить подарок</a>
+                <a id="getPresentModal"  class="block04__button" title="Получить подарок" alt="Получить подарок">Получить подарок</a>
             </div>
         </div>
     </div> 
@@ -214,7 +215,7 @@
         <p class="movie-grid__headtext simple-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius ipsum, laudantium neque nihil omnis perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae, suscipit!
         </p>
-    <div class="movie-grid__flex">
+    <div class="movie-grid__flex owl-carousel">
         <div class="movie-grid__item">
             <div class="movie-grid__inner1">
                 <div class="movie-grid__poster">
@@ -231,6 +232,17 @@
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
                                 width="34px" height="34px">
                                 <filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="34px" height="34px"  >
+                                    <feOffset in="SourceAlpha" dx="0" dy="1" />
+                                    <feGaussianBlur result="blurOut" stdDeviation="1" />
+                                    <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
+                                    <feComposite operator="atop" in="floodOut" in2="blurOut" />
+                                    <feComponentTransfer><feFuncA type="linear" slope="0.25"/></feComponentTransfer>
+                                    <feMerge>
+                                    <feMergeNode/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                  </feMerge>
+                                </filter>
+                                <filter filterUnits="userSpaceOnUse" id="mobileiconsfilm" x="0px" y="0px" width="20px" height="20px"  >
                                     <feOffset in="SourceAlpha" dx="0" dy="1" />
                                     <feGaussianBlur result="blurOut" stdDeviation="1" />
                                     <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
@@ -858,74 +870,98 @@
 
 
 
-<form action="order.php" method="POST">
-    <b>Закажите билет</b>
-    <hr>
-    <div class="form__name">
-        <label for="c-name">Ваше имя*</label>
-        <br>
-        <input id="c-name" name="client-name" placeholder="Имя*" required aria-required="true">
-    </div>
 
-    <div class="fomr__email">
-        <label for="email">Введите ваш e-mail*</label>
-        <br>
-        <input id="email" type="email" name="email" placeholder="Ваш email*" required>
-    </div>    
 
-    <div class="form__select">
-        <select name="place" aria-label="Выбрать место">
-            <option value="1">Место 1</option>
-            <option value="2">Место 2</option>
-            <option value="3">Место 3</option>
-            <option value="4">Место 4</option>
-            <option value="5">Место 5</option>
-            <option value="6">Место 6</option>
-            <option value="7" selected>Место 7</option>
-            <option value="8">Место 8</option>
-            <option value="9">Место 9</option>
-            <option value="10">Место 10</option>
-        </select>
-    </div>
 
-    <div class="form__radio">
-        <div>
-            <input id="1ryad" type="radio" name="row" value="1">
-            <label for="1ryad">1 ряд</label>
+
+<div id="modalPresent">
+    <div class="form__main">
+    <div id="closeModalPresent">X</div>
+    
+        <b>Закажите билет</b>
+        
+        <div class="form__name">
+            <input id="Guestname"  placeholder="Имя*" aria-required="true">
         </div>
-
-        <div>
-            <input id="2ryad" type="radio" name="row" value="2">
-            <label for="2ryad">2 ряд</label>
+    
+        <!-- <div class="fomr__email">
+            <label for="email">Введите ваш e-mail*</label>
+            <br>
+            <input id="email" type="email" name="email" placeholder="Ваш email*" required>
+        </div>     -->
+    
+        <div class="form__select">
+            <select id="selectGuest" name="place" aria-label="Выбрать место">
+                <option value="1">Выберите подарок</option>
+                <option value="2">Новинки 2020</option>
+                <option value="3">Бесплатный попкорн</option>
+                <option value="4">Мыльные пузыри</option>
+            </select>
         </div>
-
-        <div>
-            <input id="3ryad" type="radio" name="row" value="3">
-            <label for="3ryad">3 ряд</label>
+    
+        <!-- <div class="form__radio">
+            <div>
+                <input id="1ryad" type="radio" name="row" value="1">
+                <label for="1ryad">1 ряд</label>
+            </div>
+    
+            <div>
+                <input id="2ryad" type="radio" name="row" value="2">
+                <label for="2ryad">2 ряд</label>
+            </div>
+    
+            <div>
+                <input id="3ryad" type="radio" name="row" value="3">
+                <label for="3ryad">3 ряд</label>
+            </div>
         </div>
+    
+        <div class="form__comment">
+            <textarea name="comment" placeholder="Ваш комментарий" aria-label="Ваш комментарий">
+    
+            </textarea>
+        </div>  
+    
+        <div>
+            <input id="agreement" name="agree" type="checkbox" required aria-required="true">
+            <label for="agreement">Согласие на обработку персональных данных</label>
+        </div>
+    
+        <div>
+            <label>Промо-купон:</label>
+            <input type="file" name="promo">
+        </div> -->
+    
+        <input id="sendPresentInfo" aria-label="Отправить форму" type="submit">
+        <hr> 
     </div>
-
-    <div class="form__comment">
-        <textarea name="comment" placeholder="Ваш комментарий" aria-label="Ваш комментарий">
-
-        </textarea>
-    </div>  
-
-    <div>
-        <input id="agreement" name="agree" type="checkbox" required aria-required="true">
-        <label for="agreement">Согласие на обработку персональных данных</label>
-    </div>
-
-    <div>
-        <label>Промо-купон:</label>
-        <input type="file" name="promo">
-    </div>
-
-    <input id="sendPresentInfo" aria-label="Отправить форму" type="submit">
-    <hr>
-</form>
-
-
+    
+</div>
+    <script src="js/jquery.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/films.js"></script>
+    <script src="js/getpresent.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+});
+        });
+    </script>
+    
 </body>
 
 </html>
