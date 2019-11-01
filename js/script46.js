@@ -22,17 +22,22 @@ function numresult() {
 document.getElementById('getres').onclick = numresult;
 
     
-const min = parseInt(prompt('Введите минимальное число'));
-const max = parseInt(prompt('Введите максимальное число'));
+
     
 
-function randomInteger(min, max) {
+function randomInteger() {
+    let min = parseInt(document.getElementById('min').value);
+    let max = parseInt(document.getElementById('max').value);
     
     let rand = min + Math.random() * (max + 1 - min);
     let g = Math.floor(rand);
     document.getElementById('vivodres3').innerHTML = g;
+    console.log(min)
+    console.log(max)
+    console.log(rand)
+    console.log(g)
   }
   
-randomInteger(min,max);
-  
+  document.getElementById('getres2').onclick = randomInteger;
+
 
