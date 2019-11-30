@@ -1,39 +1,43 @@
 const films = [
-    film1 = {
+    {
         name: "Человек-паук",
         start: "10:00",
         genre: [0, 1, 2],
         hire: true,
+        price:320,
         new: true,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius",
         image: "images/mov1.jpg", 
     },
-    film2 = {
+    {
         name: "Собачья жизнь 2",
         start: "12:00",
         genre: [3, 4, 5],
         hire: true,
+        price:350,
         new: true,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius",
         image: "images/mov2.jpg", 
     },
-    film3 = {
+    {
         name: "История игрушек 4",
         start: "14:00",
         genre: [6, 3, 5],
         hire: true,
+        price:380,
         new: false,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius",
         image: "",
     },
-    film4 = {
+    {
         name: "Люди в чёрном: Интернэшнл",
         start: "16:00",
         genre: [0, 1, 5],
         hire: true,
+        price:400,
         new: true,
         description:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius",
@@ -49,6 +53,106 @@ let genrs = ['Фантастика',
             'Комедия',
             'Мультфильм',]
 
+
+
+
+const places = [
+    place1 = {
+        number: 1,
+        price:  100,
+        booking:false,
+    },
+    place2 = {
+        number: 2,
+        price:  100,
+        booking: false,
+    },
+    place3 = {
+        number: 3,
+        price:  100,
+        booking: false,
+    },
+    place4 = {
+        number: 4,
+        price:  100,
+        booking: false,
+    },
+    place5 = {
+        number: 5,
+        price:  100,
+        booking: false,
+    },
+    place6 = {
+        number: 6,
+        price:  100,
+        booking: true,
+    },
+    place7 = {
+        number: 7,
+        price:  100,
+        booking: false,
+    },
+    place8 = {
+        number: 8,
+        price:  100,
+        booking: true,
+    },
+    place9 = {
+        number: 9,
+        price:  100,
+        booking: false,
+    },
+    place10 = {
+        number: 10,
+        price:  100,
+        booking: false,
+    },
+]
+
+let placesHTML = document.querySelector('.places')
+
+for (place of places) {
+    let placeDiv = document.createElement('div')
+    placeDiv.innerHTML = place.number
+    placeDiv.classList.add('placeDiv')
+
+    if (place.booking) {
+        placeDiv.classList.add('placeBooking')
+    } else {
+        placeDiv.classList.add('placeFree')
+    }
+
+    placesHTML.append(placeDiv)
+    console.log(place)
+
+    
+    placeDiv.onmouseover = function(){
+        this.setAttribute("style","background-color: #4b4d4f;");
+    }
+
+
+    placeDiv.oncontextmenu = function() {
+        alert(place.price)
+    }
+
+
+    placeDiv.onmouseout = function(){
+        if (place.booking) {
+            this.setAttribute("style","background-color: #ffa500;");
+        } else {
+            this.setAttribute("style","background-color: #a3cc40;");
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
 let filmsHire = [];
 
 let filmsNew = [];
@@ -63,9 +167,7 @@ for (let i = 0; i < films.length; i++) {
     }
 }
 
-console.log(filmsNew);
-console.log(filmsHire);
-console.log(films);
+
 
 
 const film = {
@@ -95,25 +197,39 @@ const film = {
 
     getImage: function () {
         return this.image
+    },
+
+    getPrice: function () {
+        return this.price
     }
 };
 
-let table = document.getElementById('FilmsHireHTML2')
+//let table = document.getElementById('FilmsHireHTML2')
 
-let scroller = document.getElementById('scroller')
+    let scroller = document.getElementById('scroller')
+
+    let orderForm = document.getElementById('orderForm')
+    let CloseOrderForm = document.getElementById('CloseOrderForm')
+    
+    CloseOrderForm.onclick = function () {
+        orderForm.style.display = 'none';
+    }
+
 
 for (let i= 0; i < filmsHire.length; i++) {
     const filmName = film.getName.bind(filmsHire[i])()
     const filmStart = film.getStart.bind(filmsHire[i])()
     const filmGenre = film.getGenre.bind(filmsHire[i])()
-    
-    
+    const filmPrice = film.getPrice.bind(filmsHire[i])()
+    let FilmsHireHTML = document.getElementById('FilmsHireHTML2')
+
 
     let filmHTML = 
-    `<tr> 
+    `<tr id="tabStr_${i}"> 
       <td id="start_film_${i}">${filmStart}</td>
         <td id="name_film_${i}">${filmName}</td>
         <td id="janr_${i}">${filmGenre}</td>
+        <td>${filmPrice}</td>
         <td><svg 
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -123,11 +239,48 @@ for (let i= 0; i < filmsHire.length; i++) {
             </svg></td> 
     </tr>`
 
+   let tr = document.createElement("tr")
+   tr.innerHTML = filmHTML
+   FilmsHireHTML.appendChild(tr)
    
-    table.innerHTML += filmHTML
+    tr.onclick = function () {
+        let orderFilmName = document.getElementById('orderFilmName')
+        let orderFilmStart = document.getElementById('orderFilmStart')
+        let orderFilmGanr = document.getElementById('orderFilmGanr') 
+        let orderFilmPrice = document.getElementById('orderFilmPrice') 
+
+
+        orderFilmName.innerHTML = filmName;
+        orderFilmStart.innerHTML = filmStart;
+        orderFilmGanr.innerHTML = filmGenre;
+        orderFilmPrice.innerHTML = filmPrice;
+        
+        let orderFilmCountTicket = document.getElementById('orderFilmCountTicket'),
+            orderFilmTotalPrice = document.getElementById('orderFilmTotalPrice');
+    
+        orderFilmTotalPrice.innerHTML = filmPrice * orderFilmCountTicket.value;
+    
+        orderFilmCountTicket.onchange = function () {
+          orderFilmTotalPrice.innerHTML = filmPrice * orderFilmCountTicket.value;
+        }
+        orderForm.style.display = 'block';
+        console.log(this)
+    }
+
 
 }
 
+let sendOrder = document.getElementById('sendOrder')
+sendOrder.onclick = function () {
+    let orderFilmPersonName = document.getElementById('orderFilmPersonName')
+
+    if(orderFilmPersonName.value) {
+        orderFilmPersonName.style.border = '1px solid #bebebe'
+    } else {
+        orderFilmPersonName.style.border = '2px solid red'
+    }
+}
+    
 
 
 for (let i= 0; i < filmsNew.length; i++) {
@@ -216,4 +369,11 @@ for (let i= 0; i < filmsNew.length; i++) {
 
 scroller.innerHTML+= filmNew
 
+
+
 }
+
+
+
+
+

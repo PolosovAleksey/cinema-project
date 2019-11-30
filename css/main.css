@@ -690,6 +690,13 @@ width: 19.8rem;
 }
 
 .movie-list__table td:nth-child(4) {
+    font-size: .9rem;
+    color:#fff;
+    width: 17.5rem;
+    padding: .65rem;
+}
+
+.movie-list__table td:nth-child(5) {
     text-align: center;
     vertical-align: middle;
     padding-top: .25rem;
@@ -706,6 +713,11 @@ width: 19.8rem;
 
 .movie-list__table tr:nth-child(3) {
     background:#6c6c6c;
+}
+
+.movie-list__table tr:hover td {
+    color: rosybrown;
+    cursor: pointer;
 }
 
 /*Таблица конец */
@@ -745,6 +757,7 @@ width: 19.8rem;
     text-decoration: none;
     background: #a3cc40;
     color: #ffffff;
+    border: 0.1rem solid #a3cc40;
     border-radius: .75rem;
     padding: 1rem 1.5rem; 
     font-size: .9rem;
@@ -969,7 +982,8 @@ width: 19.8rem;
 }
 
 
-#modalPresent {
+#modalPresent,
+#orderForm {
     display: none;
     position: fixed;
     width:100%;
@@ -982,15 +996,18 @@ width: 19.8rem;
 }
 
 
-#modalPresent .form__main {
+#modalPresent .form__main,
+#orderForm .form__main {
     background-color: #fff;
     width:30rem;
+    
     margin:auto;
     border-radius: .5rem;
     position:relative;
 }
 
-#closeModalPresent {
+#closeModalPresent,
+#CloseOrderForm {
     position: absolute;
     font-size: 30px;
     right: 1rem;
@@ -1181,4 +1198,29 @@ width: 19.8rem;
     filter: url(#mobileiconsfilm);
 }
 
+}
+
+.places {
+    display: flex;
+    margin: 30px;
+}
+
+.placeDiv {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 23px;
+    font-weight: bold;
+    margin-right: 5px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.placeBooking {
+    background-color: #ffa500; 
+}
+
+.placeFree {
+    background-color: #a3cc40;
 }
