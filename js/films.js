@@ -111,45 +111,69 @@ const places = [
 
 let placesHTML = document.querySelector('.places')
 
+
+
 for (place of places) {
-    let placeDiv = document.createElement('div')
+    let placeDiv = document.createElement("div")
     placeDiv.innerHTML = place.number
-    placeDiv.classList.add('placeDiv')
+    placeDiv.classList.add("placeDiv")
+    placeDiv.addEventListener('click', order)
+    
 
     if (place.booking) {
-        placeDiv.classList.add('placeBooking')
+        placeDiv.classList.add("placeBooking")
     } else {
-        placeDiv.classList.add('placeFree')
+        placeDiv.classList.add("placeFree")
     }
+
+    placeDiv.click = order
+    placeDiv.click = placeToggle
+    placeDiv.onmouseover = placeHover
+    placeDiv.oncontextmenu = placeContext
+    placeDiv.onmouseout = placeHoverOut
 
     placesHTML.append(placeDiv)
-    console.log(place)
 
     
-    placeDiv.onmouseover = function(){
-        this.setAttribute("style","background-color: #4b4d4f;");
-    }
-
-
-    placeDiv.oncontextmenu = function() {
-        alert(place.price)
-    }
-
-
-    placeDiv.onmouseout = function(){
-        if (place.booking) {
-            this.setAttribute("style","background-color: #ffa500;");
-        } else {
-            this.setAttribute("style","background-color: #a3cc40;");
-        }
-    }
-
 }
 
 
 
+function order(e) {
+    if (place.booking) {
+        alert('Место уже забронировано')
+    } else {
+        place.booking = true;
+        let el = e.target
+        orderFilmPlace.value = el.innerHTML
+        el.classList.add("placeBooking")
+    }
+}
 
+function placeToggle(e) {
+    if (place.booking = false) {
+        let el = e.target
+        el.classList.remove("placeFree")
+        el.classList.add("placeBooking")
+    }
+}
 
+function placeContext(e) {
+    e.preventDefault()
+    alert(place.price)
+}
+
+function placeHover() {
+    this.setAttribute("style","background-color: #4b4d4f;");
+}
+
+function placeHoverOut(e) {
+    if (this.classList.contains('placeBooking')) {
+        this.setAttribute("style","background-color: #ffa500;");
+    } else {
+        this.setAttribute("style","background-color: #a3cc40;");
+    }
+}
 
 
 
@@ -278,6 +302,10 @@ sendOrder.onclick = function () {
         orderFilmPersonName.style.border = '1px solid #bebebe'
     } else {
         orderFilmPersonName.style.border = '2px solid red'
+    }
+
+    if (orderFilmPersonName.value !=0) {
+        orderForm.style.display = 'none'
     }
 }
     
