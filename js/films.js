@@ -140,7 +140,9 @@ for (place of places) {
 
 
 function order(e) {
-    if (place.booking) {
+    console.log(e.target.innerHTML)
+    let els = e.target.innerHTML
+    if (places[els-1].booking === true) {
         alert('Место уже забронировано')
     } else {
         place.booking = true;
